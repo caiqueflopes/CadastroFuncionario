@@ -10,7 +10,7 @@ O Front devera rodar na porta http://localhost:4200/
 
 # BACKEND
 Lembrete!
-O Front só consumirá se o back estiver  rodando na porta https://localhost:7199/
+O Back devera rodar na porta https://localhost:7199/
 ```
 
 ## FRONTEND install
