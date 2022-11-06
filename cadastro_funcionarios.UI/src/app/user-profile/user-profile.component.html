@@ -1,0 +1,72 @@
+<div class="card"  *ngIf="funcionario; showContainer">
+    <div class="card-header card-header-info">
+        <h4 class="card-title">{{funcionario.name}}</h4>
+        <p class="card-category"> </p>
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="row">
+              <div class="col-md-3">
+                <mat-form-field appearance="legacy">
+                  <mat-label>Nome Social</mat-label>
+                      <input matInput placeholder="Nome Social" name="NomeSocial" [(ngModel)]="funcionario.nomeSocial">
+                  </mat-form-field>
+              </div>
+                <div class="col-md-3">
+                  <mat-form-field appearance="legacy">
+                    <mat-label>RG</mat-label>
+                        <input matInput placeholder="RG" name="RG" [(ngModel)]="funcionario.rg">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field appearance="legacy">
+                    <mat-label>CPF</mat-label>
+                      <input  matInput placeholder="CPF" name="CPF"[(ngModel)]="funcionario.cpf" maxlength="11">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Nome Completo</mat-label>
+                    <input matInput placeholder="Nome Completo" name="NomeCompleto" [(ngModel)]="funcionario.nomeCompleto">
+                  </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Logradouro</mat-label>
+                    <input matInput placeholder="Logradouro" name="Logradouro" [(ngModel)]="funcionario.logradouro">
+                  </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Data Nascimento</mat-label>
+                    <input type="date" matInput placeholder="Data Nascimento" name="Data Nascimento" [(ngModel)]="funcionario.dataNascimento">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-2">
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Celular</mat-label>
+                    <input matInput placeholder="Celular" name="Celular" [(ngModel)]="funcionario.celular">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field appearance="legacy">
+                    <mat-label>Cargo</mat-label>
+                    <input matInput placeholder="Cargo" name="Cargo" [(ngModel)]="funcionario.cargo">
+                  </mat-form-field>
+                  
+                </div>
+            </div>
+            <button mat-raised-button class="btn btn-warning pull-right"  (click)="updateFuncionario(funcionario);" *ngIf="funcionario.id">Salvar</button>
+            <button mat-raised-button class="btn btn-danger pull-right"   (click)="deleteFuncionario(funcionario);" *ngIf="funcionario.id">Deletar</button>
+            <button mat-raised-button class="btn btn-success pull-right"  (click)="createFuncionario(funcionario);" *ngIf="!funcionario.id">Criar</button>
+            <div class="clearfix"></div>
+        </form>
+    </div>
+</div>
+          
