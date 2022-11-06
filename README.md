@@ -17,7 +17,7 @@ O Front só consumirá se o back estiver  rodando na porta https://localhost:719
  - npm install
  - ng build
  - ng serve -o
- <b>OR</b>
+ <br/><b>OR</b>
  - npm install
  - npm start
 
@@ -27,6 +27,6 @@ O Front só consumirá se o back estiver  rodando na porta https://localhost:719
  - dotnet ef migrations add init 
  - dotnet ef database update  
  
-##BANCO SQL Express
+## BANCO SQL Express
  - dotnet ef migrations add init 
  - dotnet ef database update 
